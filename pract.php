@@ -1,40 +1,160 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <title>RENT IT</title>
-        <meta charset="utf-8">
+
+<head>
+
+  <title>RENT IT</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            <?php include 'css/index.css'; ?>
-            <?php include 'css/header.css'; ?>
-            
-        </style>
-    </head>
-    <body>
-        <?php include 'includes/header.php'?>
-        <!--<nav>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.php"><p style="font-size:44px;"><b><span style="color:#CD0046;">RENT</span>&nbsp; IT</b></p></a></li>
-                <li><a href="index.php" > HOME </a> </li>
-                <li><a href="#" > LOGIN </a> </li>
-                <li><a href="#" > ABOUT </a> </li>
-                <li><a href="#" > CONTACT </a> </li>
-                <li><a href="#" ><button class="button nav-btn" style="background-color:#CD0046;">RENT</button></a></li>
-                <li><a href="#" ><button class="button nav-btn" style="background-color:#6F085B;">BUY</button></a></li>
-            </ul>
 
-        </nav>-->
-        <br>
-        <!-- Carousel Section Begin-->
-        <section class="main-carousel">
+<style>
+
+*{
+
+margin:0;
+padding:0;
+font-family:Roboto;
+
+}
+
+nav{
+
+height:10vh;
+
+}
+
+.nav-links{ display:flex;
+            list-style:none;
+            height:100%;
+            justify-content:space-around;
+            align-items:center;}
+
+
+
+.nav-links li a{ color:black;
+                 text-decoration:none;
+                 font-size:18px;
+                 }
+
+
+.button {
+  
+  color: white;
+  border-radius: 30px;
+  border:none;
+  width:10vw;
+  height:60px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family:Arial;
+  font-size:18px;
+  cursor: pointer;
+  margin-top:0.5vw;
+  
+}
+
+
+
+@media screen and (max-width: 900px){
+
+
+
+.line{
+            width:30px;
+            height:3px;
+            background: black;
+            margin:5px;
+
+         }
+
+nav{ position:relative;}
+
+.hamburger{  
+             position: absolute;
+             cursor: pointer;
+             right:5%;
+             top:50%;
+             transform: translate(-5%, -50%);
+             z-index: 2;
+             float:right;
+}
+
+.nav-links{  
+             position:fixed;
+             background: #fff2fd;
+             height:100vh;
+             width:100%;
+             flex-direction:column;
+             clip-path: circle(100px at 90% -10%);
+             background-size:cover;
+            
+             
+             
+             }
+
+.nav-links.open{ clip-path: circle(1000px at 90% -10%);
+                  }
+
+
+
+.button{ font-size:2.5vw;
+         align-text:center;
+         width:23vw;}
+
+
+}
+<?php include 'css/index.css'; ?>
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<nav>
+
+
+<div class="hamburger">
+
+   <div class="line"></div>
+   <div class="line"></div>
+   <div class="line"></div>
+
+</div>
+
+
+<ul class="nav-links">
+
+<li><p style="font-size:44px;"><b><span style="color:#CD0046;">RENT</span>&nbsp; IT</b></p></li>
+<li><a href="#" > HOME </a> </li>
+<li><a href="#" > LOGIN </a> </li>
+<li><a href="#" > ABOUT </a> </li>
+<li><a href="#" > CONTACT </a> </li>
+<li><a href="#" ><button class="button" style="background-color:#CD0046;">RENT</button></a></li>
+<li><a href="#" ><button class="button" style="background-color:#6F085B;">BUY</button></a></li>
+
+
+</ul>
+
+</nav>
+
+<br>
+<hr>
+<br>
+<center><h3>some image to be added here..</h3></center>
+<!-- Carousel Section Begin-->
+<section class="main-carousel">
                 <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators" id="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -357,23 +477,24 @@
                 </div>
             </div>
         </div>
-        <!--
-        <script>
+       
+<script>
 
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-        const links = document.querySelectorAll(".nav-links li");
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
-        hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-        });
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
 
-        </script>-->
-
-    
-        <!-- Required Scripts-->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</script>
+  <!-- Required Scripts-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    </body> 
+
+
+
+</body>
 </html>
